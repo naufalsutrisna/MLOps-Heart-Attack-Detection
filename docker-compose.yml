@@ -12,7 +12,7 @@ services:
       JUPYTER_ENABLE_LAB: "yes"
     volumes:
       - './notebook:/home/jovyan/work'
-      - './data:/home/jovyan/data'
+      - './data:/home/jovyan/work/data'
     networks:
       - mlflow
 
