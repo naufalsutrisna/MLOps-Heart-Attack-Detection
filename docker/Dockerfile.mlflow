@@ -1,0 +1,5 @@
+FROM mlflow/mlflow:latest
+
+WORKDIR /mlflow
+
+CMD ["mlflow", "server", "--backend-store-uri", "sqlite:///mlflow.db", "--default-artifact-root", "/mlflow/mlruns", "--host", "0.0.0.0"]

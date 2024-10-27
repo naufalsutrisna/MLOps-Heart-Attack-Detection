@@ -1,0 +1,15 @@
+# Jupyter Notebook and JupyterLab
+jupyterlab==3.6.1
+
+# MLflow
+mlflow==2.3.0
+
+# Data science libraries
+numpy==1.23.5
+pandas==1.5.3
+# scikit-learn==1.2.0
+# matplotlib==3.6.2
+# seaborn==0.12.1
+
+# Additional libraries 
+# xgboost==1.6.2  # for XGBoost algorithms
