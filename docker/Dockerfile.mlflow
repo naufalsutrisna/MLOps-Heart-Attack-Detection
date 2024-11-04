@@ -11,7 +11,7 @@ RUN mkdir -p /mlflow/mlruns
 WORKDIR /mlflow
 
 # Expose the port for MLflow server
-EXPOSE 6000
+EXPOSE 5000
 
 # Start the MLflow server
 CMD ["mlflow", "server", "--backend-store-uri", "file:/mlflow/mlruns", "--default-artifact-root", "/mlflow/mlruns", "--host", "0.0.0.0"]

@@ -23,14 +23,14 @@ services:
       dockerfile: Dockerfile.mlflow
     container_name: mlflow
     environment:
-      - MLFLOW_TRACKING_URI=http://mlflow:6000
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
     volumes:
       - ./mlruns:/mlflow/mlruns
     ports:
-      - '6000:6000'
+      - '5000:5000'
     networks:
       - mlflow
-    command: ["mlflow", "server", "--backend-store-uri", "file:/mlflow/mlruns", "--default-artifact-root", "/mlflow/mlruns", "--host", "0.0.0.0"]
+    # command: ["mlflow", "server", "--backend-store-uri", "file:/mlflow/mlruns", "--default-artifact-root", "/mlflow/mlruns", "--host", "0.0.0.0"]
 
 
 networks:
