@@ -14,4 +14,5 @@ WORKDIR /mlflow
 EXPOSE 5000
 
 # Start the MLflow server
-CMD ["mlflow", "server", "--backend-store-uri", "file:/mlflow/mlruns", "--default-artifact-root", "/mlflow/mlruns", "--host", "0.0.0.0"]
+# CMD ["mlflow", "server", "--backend-store-uri", "file:/mlflow/mlruns", "--default-artifact-root", "/mlflow/mlruns", "--host", "0.0.0.0"]
+CMD ["mlflow", "server", "--backend-store-uri", "file:/tmp/mlruns", "--default-artifact-root", "/tmp/mlruns", "--host", "0.0.0.0"]
