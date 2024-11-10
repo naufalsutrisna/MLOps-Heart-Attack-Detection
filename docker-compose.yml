@@ -27,7 +27,7 @@ services:
     volumes:
       - ./mlruns:/mlflow/mlruns
     ports:
-      - '5000:5000'
+      - '5001:5000'
     networks:
       - mlflow
     # command: ["mlflow", "server", "--backend-store-uri", "file:/mlflow/mlruns", "--default-artifact-root", "/mlflow/mlruns", "--host", "0.0.0.0"]
