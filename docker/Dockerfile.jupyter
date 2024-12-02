@@ -1,9 +1,3 @@
 FROM jupyter/datascience-notebook:latest
 
-WORKDIR /home/jovyan/work
-
-COPY requirements.txt /tmp/requirements.txt
-
-RUN pip install --no-cache-dir -r /tmp/requirements.txt
-
-CMD ["start-notebook.sh", "--NotebookApp.token=''"]
+RUN pip install mlflow boto3 psycopg2-binary

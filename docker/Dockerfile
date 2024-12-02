@@ -1,3 +1,3 @@
-FROM python:3.8-slim
+FROM ghcr.io/mlflow/mlflow:latest
 
-RUN pip install -r requirements.txt
+RUN pip install boto3 psycopg2-binary
