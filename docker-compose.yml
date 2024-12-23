@@ -103,7 +103,6 @@ services:
         /run.sh
         grafana-cli plugins install grafana-postgres-datasource
 
-
 networks:
   mlflow:
     driver: bridge
