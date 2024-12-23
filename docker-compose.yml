@@ -82,6 +82,28 @@ services:
       retries: 3
       timeout: 5s
 
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    networks:
+      - mlflow
+    volumes:
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - pgsql
+    entrypoint:
+      - /bin/bash
+      - -c
+      - |
+        /run.sh
+        grafana-cli plugins install grafana-postgres-datasource
+
+
 networks:
   mlflow:
     driver: bridge
@@ -90,4 +112,6 @@ volumes:
   mlflow-pgsql:
     driver: local
   mlflow-minio:
+    driver: local
+  grafana-data:
     driver: local
